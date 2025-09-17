@@ -1,20 +1,31 @@
 import yfinance as yf
 import pandas as pd
 from datatime import datetime, timedelta
+import os
+import pickle
+from typing import Dict, List, Optional
+from .config import SP500_TOP_50, RAW_DATA_DIR, START_DATE, END_DATE, SECTOR_MAPPING
 
-def collect_stock_data():
+class FinancialDataCollector:               # collect and manage financial data
+    
+    def __init__(self, tickers: List[str] = None):
+        self.tickers = tickers or SP500_TOP_50
+        self.raw_data_dir = RAW_DATA_DIR
+        
 
-    tickers = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'META', 'NVDA', 'BRK-B', 'UNH', 'JNJ']
+    def collect_stock_data(self, period: str = "2y", save_data: bool = True) -> Dict:           # collect stock price data for specific tickers
 
-    stock_data = {}
+        print(f"Collecting data for {len(self.tickers)} stocks...")
+        stock_data = {}
 
-    for ticker in tickers:
-        stock = yf.Ticker(ticker)
+        for i, ticker in enumerate(self.tickers):
+            try:
+                print(f"Processing {ticker} ({i+1}/{len(self.tickers)})")
+                
+                stock = yf.Ticker(ticker)
+                hist = stock.history(period=period)
 
-        hist = stock.history(period="2y")       # get 2 years of historical data
-        info = stock.info
-        stock_data[ticker] = {
-            'prices': hist,
-            'info': info
-        }
-    return stock_data
+                info = stock.info
+
+                hist['Returns'] = hist['Close'].pct_change()
+                
