@@ -22,3 +22,18 @@ SECTOR_MAPPING = {                                                              
     'Utilities': ['NEE'],
     'Consumer Staples': ['PEP', 'KO', 'PM']
 }
+
+DATA_DIR = 'data'
+RAW_DATA_DIR = os.path.join(DATA_DIR, 'raw')
+PROCESSED_DATA_DIR = os.path.join(DATA_DIR, 'processed')    
+EXTERNAL_DATA_DIR = os.path.join(DATA_DIR, 'external')
+
+for directory in [DATA_DIR, RAW_DATA_DIR, PROCESSED_DATA_DIR, EXTERNAL_DATA_DIR]:
+    os.makedirs(directory, exist_ok=True)
+
+PLOT_STYLE = 'seaborn-v0_8'
+COLOR_PALETTE = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', 
+                 '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
+
+START_DATE = '2022-01-01'
+END_DATE = '2024-12-31'
