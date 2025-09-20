@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import os
 import pickle
 from typing import Dict, List, Optional
-from .config import SP500_TOP_50, RAW_DATA_DIR, START_DATE, END_DATE, SECTOR_MAPPING
+from config import SP500_TOP_50, RAW_DATA_DIR, START_DATE, END_DATE, SECTOR_MAPPING
 
 class FinancialDataCollector:               # collect and manage financial data
     
@@ -105,7 +105,7 @@ class FinancialDataCollector:               # collect and manage financial data
         return market_data
     
 
-    def create_master_dataframe(self, stock_data: Dict) -> pd.DateFrame:        # create a master dataframe with all stock prices
+    def create_master_dataframe(self, stock_data: Dict) -> pd.DataFrame:        # create a master dataframe with all stock prices
 
         price_data = {}
         
