@@ -116,6 +116,8 @@ class FinancialDataCollector:               # collect and manage financial data
         df = pd.DataFrame(price_data)
         df.index = pd.to_datetime(df.index)
         return df
+    
+    
         
 
 

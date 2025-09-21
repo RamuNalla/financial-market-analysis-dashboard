@@ -3,7 +3,7 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 from typing import List, Dict, Tuple
-from .config import COLOR_PALETTE, PLOT_STYLE
+from config import COLOR_PALETTE, PLOT_STYLE
 
 class VisualizationUtils:           # utility functions for creating visulaizations
 
