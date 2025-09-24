@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "rect"}, "encoding": {"color": {"field": "Correlation", "scale": {"domain": [-1, 1], "scheme": "redblue"}, "title": "Correlation", "type": "quantitative"}, "tooltip": [{"field": "Stock1", "type": "nominal"}, {"field": "Stock2", "type": "nominal"}, {"field": "Correlation", "type": "quantitative"}], "x": {"field": "Stock2", "title": "Stock", "type": "nominal"}, "y": {"field": "Stock1", "title": "Stock", "type": "nominal"}}, "title": "Stock Return Correlations"}, {"mark": {"type": "text", "baseline": "middle", "fontSize": 10, "fontWeight": "bold"}, "encoding": {"color": {"condition": {"test": "(datum.Correlation > 0)", "value": "white"}, "value": "black"}, "text": {"field": "Correlation", "format": ".2f", "type": "quantitative"}, "x": {"field": "Stock2", "type": "nominal"}, "y": {"field": "Stock1", "type": "nominal"}}}], "data": {"name": "data-f72233510eb9ddb32b82c5ec44a0eaf4"}, "height": 400, "width": 400, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-f72233510eb9ddb32b82c5ec44a0eaf4": [{"Stock1": "AAPL", "Stock2": "AAPL", "Correlation": 1.0, "x": 0, "y": 0}, {"Stock1": "AAPL", "Stock2": "MSFT", "Correlation": 0.5152931344772761, "x": 1, "y": 0}, {"Stock1": "AAPL", "Stock2": "GOOGL", "Correlation": 0.45870099360008193, "x": 2, "y": 0}, {"Stock1": "AAPL", "Stock2": "TSLA", "Correlation": 0.454353894744166, "x": 3, "y": 0}, {"Stock1": "AAPL", "Stock2": "NVDA", "Correlation": 0.3716517957789056, "x": 4, "y": 0}, {"Stock1": "AAPL", "Stock2": "META", "Correlation": 0.4151940850209091, "x": 5, "y": 0}, {"Stock1": "AAPL", "Stock2": "AMZN", "Correlation": 0.5196733611646783, "x": 6, "y": 0}, {"Stock1": "AAPL", "Stock2": "JPM", "Correlation": 0.3211211993119448, "x": 7, "y": 0}, {"Stock1": "MSFT", "Stock2": "AAPL", "Correlation": 0.5152931344772761, "x": 0, "y": 1}, {"Stock1": "MSFT", "Stock2": "MSFT", "Correlation": 1.0, "x": 1, "y": 1}, {"Stock1": "MSFT", "Stock2": "GOOGL", "Correlation": 0.5132053595456881, "x": 2, "y": 1}, {"Stock1": "MSFT", "Stock2": "TSLA", "Correlation": 0.3764741943536182, "x": 3, "y": 1}, {"Stock1": "MSFT", "Stock2": "NVDA", "Correlation": 0.5492789883841519, "x": 4, "y": 1}, {"Stock1": "MSFT", "Stock2": "META", "Correlation": 0.619101686840042, "x": 5, "y": 1}, {"Stock1": "MSFT", "Stock2": "AMZN", "Correlation": 0.6475631372296162, "x": 6, "y": 1}, {"Stock1": "MSFT", "Stock2": "JPM", "Correlation": 0.34439086067133423, "x": 7, "y": 1}, {"Stock1": "GOOGL", "Stock2": "AAPL", "Correlation": 0.45870099360008193, "x": 0, "y": 2}, {"Stock1": "GOOGL", "Stock2": "MSFT", "Correlation": 0.5132053595456881, "x": 1, "y": 2}, {"Stock1": "GOOGL", "Stock2": "GOOGL", "Correlation": 1.0, "x": 2, "y": 2}, {"Stock1": "GOOGL", "Stock2": "TSLA", "Correlation": 0.3868855475798393, "x": 3, "y": 2}, {"Stock1": "GOOGL", "Stock2": "NVDA", "Correlation": 0.42417450997411255, "x": 4, "y": 2}, {"Stock1": "GOOGL", "Stock2": "META", "Correlation": 0.47304209880325626, "x": 5, "y": 2}, {"Stock1": "GOOGL", "Stock2": "AMZN", "Correlation": 0.5853108940124551, "x": 6, "y": 2}, {"Stock1": "GOOGL", "Stock2": "JPM", "Correlation": 0.28570891613386956, "x": 7, "y": 2}, {"Stock1": "TSLA", "Stock2": "AAPL", "Correlation": 0.454353894744166, "x": 0, "y": 3}, {"Stock1": "TSLA", "Stock2": "MSFT", "Correlation": 0.3764741943536182, "x": 1, "y": 3}, {"Stock1": "TSLA", "Stock2": "GOOGL", "Correlation": 0.3868855475798393, "x": 2, "y": 3}, {"Stock1": "TSLA", "Stock2": "TSLA", "Correlation": 1.0, "x": 3, "y": 3}, {"Stock1": "TSLA", "Stock2": "NVDA", "Correlation": 0.36282927411569654, "x": 4, "y": 3}, {"Stock1": "TSLA", "Stock2": "META", "Correlation": 0.33334550349171105, "x": 5, "y": 3}, {"Stock1": "TSLA", "Stock2": "AMZN", "Correlation": 0.4162827958658543, "x": 6, "y": 3}, {"Stock1": "TSLA", "Stock2": "JPM", "Correlation": 0.3757689238644747, "x": 7, "y": 3}, {"Stock1": "NVDA", "Stock2": "AAPL", "Correlation": 0.3716517957789056, "x": 0, "y": 4}, {"Stock1": "NVDA", "Stock2": "MSFT", "Correlation": 0.5492789883841519, "x": 1, "y": 4}, {"Stock1": "NVDA", "Stock2": "GOOGL", "Correlation": 0.42417450997411255, "x": 2, "y": 4}, {"Stock1": "NVDA", "Stock2": "TSLA", "Correlation": 0.36282927411569654, "x": 3, "y": 4}, {"Stock1": "NVDA", "Stock2": "NVDA", "Correlation": 1.0, "x": 4, "y": 4}, {"Stock1": "NVDA", "Stock2": "META", "Correlation": 0.4916420608387549, "x": 5, "y": 4}, {"Stock1": "NVDA", "Stock2": "AMZN", "Correlation": 0.5261992573851801, "x": 6, "y": 4}, {"Stock1": "NVDA", "Stock2": "JPM", "Correlation": 0.27926781333613854, "x": 7, "y": 4}, {"Stock1": "META", "Stock2": "AAPL", "Correlation": 0.4151940850209091, "x": 0, "y": 5}, {"Stock1": "META", "Stock2": "MSFT", "Correlation": 0.619101686840042, "x": 1, "y": 5}, {"Stock1": "META", "Stock2": "GOOGL", "Correlation": 0.47304209880325626, "x": 2, "y": 5}, {"Stock1": "META", "Stock2": "TSLA", "Correlation": 0.33334550349171105, "x": 3, "y": 5}, {"Stock1": "META", "Stock2": "NVDA", "Correlation": 0.4916420608387549, "x": 4, "y": 5}, {"Stock1": "META", "Stock2": "META", "Correlation": 1.0, "x": 5, "y": 5}, {"Stock1": "META", "Stock2": "AMZN", "Correlation": 0.6694492970250236, "x": 6, "y": 5}, {"Stock1": "META", "Stock2": "JPM", "Correlation": 0.30528381806083293, "x": 7, "y": 5}, {"Stock1": "AMZN", "Stock2": "AAPL", "Correlation": 0.5196733611646783, "x": 0, "y": 6}, {"Stock1": "AMZN", "Stock2": "MSFT", "Correlation": 0.6475631372296162, "x": 1, "y": 6}, {"Stock1": "AMZN", "Stock2": "GOOGL", "Correlation": 0.5853108940124551, "x": 2, "y": 6}, {"Stock1": "AMZN", "Stock2": "TSLA", "Correlation": 0.4162827958658543, "x": 3, "y": 6}, {"Stock1": "AMZN", "Stock2": "NVDA", "Correlation": 0.5261992573851801, "x": 4, "y": 6}, {"Stock1": "AMZN", "Stock2": "META", "Correlation": 0.6694492970250236, "x": 5, "y": 6}, {"Stock1": "AMZN", "Stock2": "AMZN", "Correlation": 1.0, "x": 6, "y": 6}, {"Stock1": "AMZN", "Stock2": "JPM", "Correlation": 0.39938489217323025, "x": 7, "y": 6}, {"Stock1": "JPM", "Stock2": "AAPL", "Correlation": 0.3211211993119448, "x": 0, "y": 7}, {"Stock1": "JPM", "Stock2": "MSFT", "Correlation": 0.34439086067133423, "x": 1, "y": 7}, {"Stock1": "JPM", "Stock2": "GOOGL", "Correlation": 0.28570891613386956, "x": 2, "y": 7}, {"Stock1": "JPM", "Stock2": "TSLA", "Correlation": 0.3757689238644747, "x": 3, "y": 7}, {"Stock1": "JPM", "Stock2": "NVDA", "Correlation": 0.27926781333613854, "x": 4, "y": 7}, {"Stock1": "JPM", "Stock2": "META", "Correlation": 0.30528381806083293, "x": 5, "y": 7}, {"Stock1": "JPM", "Stock2": "AMZN", "Correlation": 0.39938489217323025, "x": 6, "y": 7}, {"Stock1": "JPM", "Stock2": "JPM", "Correlation": 1.0, "x": 7, "y": 7}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

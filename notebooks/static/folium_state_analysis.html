@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a70d64ab7ca7610a672d110ae62782df {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a70d64ab7ca7610a672d110ae62782df" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a70d64ab7ca7610a672d110ae62782df = L.map(
+                "map_a70d64ab7ca7610a672d110ae62782df",
+                {
+                    center: [39.8283, -98.5795],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_43562cc78dcd59a89de8cc8cfbfbda43 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a70d64ab7ca7610a672d110ae62782df);
+        
+    
+            var circle_marker_334d1fdc6c3bd5c79ec5580d22525659 = L.circleMarker(
+                [36.7783, -119.4179],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60, "stroke": true, "weight": 3}
+            ).addTo(map_a70d64ab7ca7610a672d110ae62782df);
+        
+    
+        var popup_377e5d58c62aa4a535d56ce80c29582f = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_31e375d9bb3405c65769052b7e0e13e8 = $(`<div id="html_31e375d9bb3405c65769052b7e0e13e8" style="width: 100.0%; height: 100.0%;">             <b>CA</b><br>             Companies: 6<br>             Total Market Cap: $13646.6B<br>             Avg Performance: 109.3%             </div>`)[0];
+                popup_377e5d58c62aa4a535d56ce80c29582f.setContent(html_31e375d9bb3405c65769052b7e0e13e8);
+            
+        
+
+        circle_marker_334d1fdc6c3bd5c79ec5580d22525659.bindPopup(popup_377e5d58c62aa4a535d56ce80c29582f)
+        ;
+
+        
+    
+    
+            var circle_marker_34d52f34bc11a2ccfe0976ec3ea6e046 = L.circleMarker(
+                [47.7511, -120.7401],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60, "stroke": true, "weight": 3}
+            ).addTo(map_a70d64ab7ca7610a672d110ae62782df);
+        
+    
+        var popup_b4d032b49689126b56d9c9e2185faee1 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_4bcea5dd0ae668a0c3e8d52222002653 = $(`<div id="html_4bcea5dd0ae668a0c3e8d52222002653" style="width: 100.0%; height: 100.0%;">             <b>WA</b><br>             Companies: 2<br>             Total Market Cap: $6318.6B<br>             Avg Performance: 67.5%             </div>`)[0];
+                popup_b4d032b49689126b56d9c9e2185faee1.setContent(html_4bcea5dd0ae668a0c3e8d52222002653);
+            
+        
+
+        circle_marker_34d52f34bc11a2ccfe0976ec3ea6e046.bindPopup(popup_b4d032b49689126b56d9c9e2185faee1)
+        ;
+
+        
+    
+    
+            var circle_marker_afa9d8318f973b96b89be53a206a0ca5 = L.circleMarker(
+                [31.9686, -99.9018],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_a70d64ab7ca7610a672d110ae62782df);
+        
+    
+        var popup_4f94a42d2d5f1251fa5d563a091dc7c9 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_8203d462f4715afcd84e0a866b6f603a = $(`<div id="html_8203d462f4715afcd84e0a866b6f603a" style="width: 100.0%; height: 100.0%;">             <b>TX</b><br>             Companies: 1<br>             Total Market Cap: $1416.7B<br>             Avg Performance: 62.3%             </div>`)[0];
+                popup_4f94a42d2d5f1251fa5d563a091dc7c9.setContent(html_8203d462f4715afcd84e0a866b6f603a);
+            
+        
+
+        circle_marker_afa9d8318f973b96b89be53a206a0ca5.bindPopup(popup_4f94a42d2d5f1251fa5d563a091dc7c9)
+        ;
+
+        
+    
+    
+            var circle_marker_0e4cc36cf846efb627b722276cb2775e = L.circleMarker(
+                [42.1657, -74.9481],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_a70d64ab7ca7610a672d110ae62782df);
+        
+    
+        var popup_58757ae65e0efa49b6253aadd3cf8dab = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_d7f827fd289e9bb804ec80bc44857be5 = $(`<div id="html_d7f827fd289e9bb804ec80bc44857be5" style="width: 100.0%; height: 100.0%;">             <b>NY</b><br>             Companies: 2<br>             Total Market Cap: $1393.7B<br>             Avg Performance: 83.2%             </div>`)[0];
+                popup_58757ae65e0efa49b6253aadd3cf8dab.setContent(html_d7f827fd289e9bb804ec80bc44857be5);
+            
+        
+
+        circle_marker_0e4cc36cf846efb627b722276cb2775e.bindPopup(popup_58757ae65e0efa49b6253aadd3cf8dab)
+        ;
+
+        
+    
+    
+            var circle_marker_0823a698c5a8678e7f1319e05914e2f8 = L.circleMarker(
+                [40.2206, -74.7564],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_a70d64ab7ca7610a672d110ae62782df);
+        
+    
+        var popup_385b0dd9fc901c6ed08cc0f9632f0af6 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_a962bdb9c62b8ea69e96181548869e3a = $(`<div id="html_a962bdb9c62b8ea69e96181548869e3a" style="width: 100.0%; height: 100.0%;">             <b>NJ</b><br>             Companies: 1<br>             Total Market Cap: $424.3B<br>             Avg Performance: 15.2%             </div>`)[0];
+                popup_385b0dd9fc901c6ed08cc0f9632f0af6.setContent(html_a962bdb9c62b8ea69e96181548869e3a);
+            
+        
+
+        circle_marker_0823a698c5a8678e7f1319e05914e2f8.bindPopup(popup_385b0dd9fc901c6ed08cc0f9632f0af6)
+        ;
+
+        
+    
+    
+            var circle_marker_9eac69b3e54203b5413d81afe38a86e5 = L.circleMarker(
+                [34.9513, -92.3809],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_a70d64ab7ca7610a672d110ae62782df);
+        
+    
+        var popup_978e604590a10ac19ab05df207590e22 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_dc7a991cd5ed394b6241c3378745965b = $(`<div id="html_dc7a991cd5ed394b6241c3378745965b" style="width: 100.0%; height: 100.0%;">             <b>AR</b><br>             Companies: 1<br>             Total Market Cap: $815.9B<br>             Avg Performance: 91.7%             </div>`)[0];
+                popup_978e604590a10ac19ab05df207590e22.setContent(html_dc7a991cd5ed394b6241c3378745965b);
+            
+        
+
+        circle_marker_9eac69b3e54203b5413d81afe38a86e5.bindPopup(popup_978e604590a10ac19ab05df207590e22)
+        ;
+
+        
+    
+    
+            var circle_marker_13c11c1c426ed61a04750bf99e0b4dc7 = L.circleMarker(
+                [40.3888, -82.7649],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_a70d64ab7ca7610a672d110ae62782df);
+        
+    
+        var popup_3dae957007284d558459e84f502fd429 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_4dd73f290fca9e2600de901d282e3a35 = $(`<div id="html_4dd73f290fca9e2600de901d282e3a35" style="width: 100.0%; height: 100.0%;">             <b>OH</b><br>             Companies: 1<br>             Total Market Cap: $365.2B<br>             Avg Performance: 6.9%             </div>`)[0];
+                popup_3dae957007284d558459e84f502fd429.setContent(html_4dd73f290fca9e2600de901d282e3a35);
+            
+        
+
+        circle_marker_13c11c1c426ed61a04750bf99e0b4dc7.bindPopup(popup_3dae957007284d558459e84f502fd429)
+        ;
+
+        
+    
+    
+            var circle_marker_daa93dbb4d07af32465d66607a1af25f = L.circleMarker(
+                [33.249, -83.4426],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_a70d64ab7ca7610a672d110ae62782df);
+        
+    
+        var popup_91b6778a9ed4b072190b353a9fa51d2a = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_5375d2371eaa04e1c47327ee8689161c = $(`<div id="html_5375d2371eaa04e1c47327ee8689161c" style="width: 100.0%; height: 100.0%;">             <b>GA</b><br>             Companies: 1<br>             Total Market Cap: $413.8B<br>             Avg Performance: 40.4%             </div>`)[0];
+                popup_91b6778a9ed4b072190b353a9fa51d2a.setContent(html_5375d2371eaa04e1c47327ee8689161c);
+            
+        
+
+        circle_marker_daa93dbb4d07af32465d66607a1af25f.bindPopup(popup_91b6778a9ed4b072190b353a9fa51d2a)
+        ;
+
+        
+    
+    
+            var circle_marker_1498ad649d42907201f13b58d998853f = L.circleMarker(
+                [35.5175, -80.8164],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_a70d64ab7ca7610a672d110ae62782df);
+        
+    
+        var popup_c01dc375153d4921797617f59de1fc59 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_d11667b0404e2a7a5d0a63577c44984d = $(`<div id="html_d11667b0404e2a7a5d0a63577c44984d" style="width: 100.0%; height: 100.0%;">             <b>NC</b><br>             Companies: 1<br>             Total Market Cap: $387.0B<br>             Avg Performance: 92.5%             </div>`)[0];
+                popup_c01dc375153d4921797617f59de1fc59.setContent(html_d11667b0404e2a7a5d0a63577c44984d);
+            
+        
+
+        circle_marker_1498ad649d42907201f13b58d998853f.bindPopup(popup_c01dc375153d4921797617f59de1fc59)
+        ;
+
+        
+    
+</script>
+</html>

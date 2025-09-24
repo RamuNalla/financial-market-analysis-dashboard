@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "circle", "size": 100}, "encoding": {"color": {"field": "Sector", "scale": {"scheme": "category10"}, "type": "nominal"}, "opacity": {"condition": {"param": "param_10", "value": 0.8}, "value": 0.6}, "size": {"field": "Market_Cap", "scale": {"range": [50, 400]}, "title": "Market Cap (B$)", "type": "quantitative"}, "stroke": {"condition": {"param": "param_10", "value": "black"}, "value": null}, "strokeWidth": {"condition": {"param": "param_10", "value": 2}, "value": 0}, "tooltip": [{"field": "Ticker", "type": "nominal"}, {"field": "Annual_Return", "type": "quantitative"}, {"field": "Annual_Volatility", "type": "quantitative"}, {"field": "Market_Cap", "type": "quantitative"}, {"field": "Sector", "type": "nominal"}], "x": {"field": "Annual_Volatility", "scale": {"zero": false}, "title": "Annual Volatility (%)", "type": "quantitative"}, "y": {"field": "Annual_Return", "scale": {"zero": false}, "title": "Annual Return (%)", "type": "quantitative"}}, "name": "view_18", "title": "Risk vs Return by Sector"}, {"mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 7, "fontSize": 10, "fontWeight": "bold"}, "encoding": {"color": {"value": "black"}, "text": {"condition": {"param": "param_10", "field": "Ticker", "type": "nominal"}, "value": ""}, "x": {"field": "Annual_Volatility", "type": "quantitative"}, "y": {"field": "Annual_Return", "type": "quantitative"}}}, {"mark": {"type": "rule", "color": "gray", "strokeDash": [3, 3]}, "encoding": {"x": {"aggregate": "mean", "field": "Annual_Volatility", "type": "quantitative"}}}, {"mark": {"type": "rule", "color": "gray", "strokeDash": [3, 3]}, "encoding": {"y": {"aggregate": "mean", "field": "Annual_Return", "type": "quantitative"}}}], "data": {"name": "data-0a44c7e166c70bc24e3ec3b36bb76fc3"}, "height": 400, "params": [{"name": "param_10", "select": {"type": "point", "on": "mouseover"}, "views": ["view_18"]}], "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-0a44c7e166c70bc24e3ec3b36bb76fc3": [{"Ticker": "AAPL", "Annual_Return": 21.187320732493724, "Annual_Volatility": 27.748561340038325, "Market_Cap": 3643.315585024, "Sector": "Technology"}, {"Ticker": "MSFT", "Annual_Return": 27.354002178766283, "Annual_Volatility": 22.391262484713483, "Market_Cap": 3849.8598912, "Sector": "Technology"}, {"Ticker": "GOOGL", "Annual_Return": 37.33234133369601, "Annual_Volatility": 30.22960466519881, "Market_Cap": 3083.40719616, "Sector": "Technology"}, {"Ticker": "AMZN", "Annual_Return": 31.867435027340633, "Annual_Volatility": 31.161381783987572, "Market_Cap": 2468.713857024, "Sector": "Consumer"}, {"Ticker": "TSLA", "Annual_Return": 44.02698155156681, "Annual_Volatility": 63.22264646748255, "Market_Cap": 1416.747155456, "Sector": "Consumer"}, {"Ticker": "META", "Annual_Return": 54.846542374735996, "Annual_Volatility": 36.54586861698411, "Market_Cap": 1955.400777728, "Sector": "Technology"}, {"Ticker": "NVDA", "Annual_Return": 84.92013565050804, "Annual_Volatility": 50.74482578594668, "Market_Cap": 4301.38458112, "Sector": "Technology"}, {"Ticker": "BRK-B", "Annual_Return": 16.239764823289303, "Annual_Volatility": 16.612419983408913, "Market_Cap": 1063.826751488, "Sector": "Financial"}, {"Ticker": "UNH", "Annual_Return": -9.728579977356668, "Annual_Volatility": 37.917055396214124, "Market_Cap": 304.931241984, "Sector": "Healthcare"}, {"Ticker": "JNJ", "Annual_Return": 8.614760085593945, "Annual_Volatility": 17.3496567046073, "Market_Cap": 424.325251072, "Sector": "Healthcare"}, {"Ticker": "V", "Annual_Return": 19.99230932207944, "Annual_Volatility": 19.31728835789983, "Market_Cap": 663.045144576, "Sector": "Financial"}, {"Ticker": "WMT", "Annual_Return": 35.04788128737145, "Annual_Volatility": 21.498848455181687, "Market_Cap": 815.861858304, "Sector": "Consumer"}, {"Ticker": "XOM", "Annual_Return": 4.401268117579674, "Annual_Volatility": 22.120121681539686, "Market_Cap": 480.979550208, "Sector": "Energy"}, {"Ticker": "LLY", "Annual_Return": 21.012950145516907, "Annual_Volatility": 35.47044858910581, "Market_Cap": 674.126495744, "Sector": "Healthcare"}, {"Ticker": "JPM", "Annual_Return": 43.00230538510497, "Annual_Volatility": 23.47970001612708, "Market_Cap": 865.567506432, "Sector": "Financial"}, {"Ticker": "PG", "Annual_Return": 4.781669207332783, "Annual_Volatility": 16.902600983226456, "Market_Cap": 365.209321472, "Sector": "Consumer"}, {"Ticker": "MA", "Annual_Return": 20.2348744698625, "Annual_Volatility": 19.461930626729703, "Market_Cap": 528.087547904, "Sector": "Financial"}, {"Ticker": "HD", "Annual_Return": 19.39657252938373, "Annual_Volatility": 21.52030535117663, "Market_Cap": 413.772283904, "Sector": "Consumer"}, {"Ticker": "CVX", "Annual_Return": 3.730970204548403, "Annual_Volatility": 22.842410067355857, "Market_Cap": 314.735427584, "Sector": "Energy"}, {"Ticker": "MRK", "Annual_Return": -7.797029191377308, "Annual_Volatility": 23.908416752748817, "Market_Cap": 203.594317824, "Sector": "Healthcare"}, {"Ticker": "ABBV", "Annual_Return": 25.198537196391896, "Annual_Volatility": 23.846614027181058, "Market_Cap": 393.006219264, "Sector": "Healthcare"}, {"Ticker": "PEP", "Annual_Return": -6.19026529822142, "Annual_Volatility": 19.60083662671015, "Market_Cap": 194.080391168, "Sector": "Consumer Staples"}, {"Ticker": "KO", "Annual_Return": 10.655626375995055, "Annual_Volatility": 15.41265106503061, "Market_Cap": 285.892608, "Sector": "Consumer Staples"}, {"Ticker": "AVGO", "Annual_Return": 85.98055675616074, "Annual_Volatility": 51.67652255622297, "Market_Cap": 1628.932538368, "Sector": "Other"}, {"Ticker": "PFE", "Annual_Return": -7.495041787888504, "Annual_Volatility": 24.91137329572867, "Market_Cap": 136.623783936, "Sector": "Healthcare"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
