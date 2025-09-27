@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from typing import Dict, List, Tuple
-from config import PROCESSED_DATA_DIR
+from .config import PROCESSED_DATA_DIR
 import os
 
 class FinancialDataProcessor:           # process and analyze financial data
@@ -129,6 +129,7 @@ class FinancialDataProcessor:           # process and analyze financial data
 
     
 
+# 
 
 
 

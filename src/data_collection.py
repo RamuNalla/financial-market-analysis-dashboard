@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import os
 import pickle
 from typing import Dict, List, Optional
-from config import SP500_TOP_50, RAW_DATA_DIR, START_DATE, END_DATE, SECTOR_MAPPING
+from .config import SP500_TOP_50, RAW_DATA_DIR, START_DATE, END_DATE, SECTOR_MAPPING
 
 class FinancialDataCollector:               # collect and manage financial data
     
@@ -119,10 +119,3 @@ class FinancialDataCollector:               # collect and manage financial data
     
     
         
-
-
-
-
-
-
-
